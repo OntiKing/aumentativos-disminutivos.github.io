@@ -45,19 +45,7 @@
       animation: moveTopScore 1000ms linear infinite;
     }
   }
-  .starContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    img {
-      width: 35px;
-    }
-    .imgStarsEnd {
-      width: 50px;
-    }
-  }
+
   .starContainer--activo {
     display: none;
   }

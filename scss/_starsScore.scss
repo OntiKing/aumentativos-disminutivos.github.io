@@ -1,0 +1,14 @@
+.starContainer {
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  img {
+    width: 25px;
+  }
+  .imgStarsEnd {
+    width: 50px;
+  }
+}

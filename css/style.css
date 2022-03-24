@@ -414,28 +414,6 @@ body {
           animation: moveTopScore 1000ms linear infinite;
 }
 
-.container__endGame .starContainer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-}
-
-.container__endGame .starContainer img {
-  width: 35px;
-}
-
-.container__endGame .starContainer .imgStarsEnd {
-  width: 50px;
-}
-
 .container__endGame .starContainer--activo {
   display: none;
 }
@@ -522,5 +500,28 @@ body {
 
 .dragBaground {
   background-color: aliceblue;
+}
+
+.starContainer {
+  margin-top: 90px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.starContainer img {
+  width: 25px;
+}
+
+.starContainer .imgStarsEnd {
+  width: 50px;
 }
 /*# sourceMappingURL=style.css.map */
