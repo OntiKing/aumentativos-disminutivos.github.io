@@ -17,6 +17,8 @@ function createStarts() {
   }
 }
 
+createStarts();
+
 //08 esta funcion pinta de color la estrella sea correcta o no
 function updateAnswerStarts(markType) {
   if (markType === "correct") {

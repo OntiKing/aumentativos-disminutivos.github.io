@@ -46,6 +46,9 @@
     align-items: center;
     .questionDetail {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       h2 {
         position: absolute;
         top: 17px;
@@ -58,15 +61,17 @@
       }
     }
     .answerDetail {
-      img {
-        width: 100px;
-        opacity: 0.5;
-      }
+      background-image: url("../img/token_puzzle.png");
+      width: 100px;
+      height: 59px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.4;
     }
   }
   .optionsAnswers {
     display: flex;
-    margin-top: 30px;
+    margin-top: 40px;
     .answers {
       display: flex;
       justify-content: center;
@@ -80,18 +85,23 @@
       transition: all 3s ease;
       color: $color-text-game;
       font-weight: 700;
+      text-align: center;
+
       &:hover {
         background-image: url("../img/token_puzzle_hover.png");
       }
     }
     .answersOne {
       transform: translateY(10px);
+      transform: rotate(3deg);
     }
     .answersTwo {
+      transform: rotate(-3deg);
       transform: translateY(50px);
     }
     .answersThree {
       transform: translateY(15px);
+      transform: rotate(-5deg);
     }
   }
 }

@@ -251,6 +251,15 @@ body {
 
 .container__starGame .questionContent .questionDetail {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container__starGame .questionContent .questionDetail h2 {
@@ -265,16 +274,20 @@ body {
   width: 200px;
 }
 
-.container__starGame .questionContent .answerDetail img {
+.container__starGame .questionContent .answerDetail {
+  background-image: url("../img/token_puzzle.png");
   width: 100px;
-  opacity: 0.5;
+  height: 59px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
 }
 
 .container__starGame .optionsAnswers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .container__starGame .optionsAnswers .answers {
@@ -297,6 +310,7 @@ body {
   transition: all 3s ease;
   color: #555554;
   font-weight: 700;
+  text-align: center;
 }
 
 .container__starGame .optionsAnswers .answers:hover {
@@ -306,9 +320,13 @@ body {
 .container__starGame .optionsAnswers .answersOne {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
 
 .container__starGame .optionsAnswers .answersTwo {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
 }
@@ -316,6 +334,8 @@ body {
 .container__starGame .optionsAnswers .answersThree {
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 .container__starGame--Focus {
