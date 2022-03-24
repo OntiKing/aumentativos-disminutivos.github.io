@@ -1,0 +1,81 @@
+.containImgQuestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .imgQuestion {
+    background-color: white;
+    width: 300px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .empty {
+    background-color: aliceblue;
+    width: 150px;
+    height: 100px;
+  }
+}
+
+.containImgAnswer {
+  display: flex;
+  gap: 10px;
+  .imgAnswers {
+    background-color: white;
+    padding: 2px;
+    .draggImg {
+      background-color: rebeccapurple;
+      width: 100px;
+      height: 100px;
+      cursor: move;
+    }
+  }
+}
+
+.dragBaground {
+  background-color: aliceblue;
+}
+
+// .imgOption {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .fill {
+//   background-image: url("/img/token_puzzle.png");
+//   object-fit: cover;
+//   width: 100px;
+//   height: 100px;
+//   position: relative;
+//   top: 5px;
+//   left: 5px;
+//   cursor: pointer;
+// }
+
+// .empty {
+//   display: inline-block;
+//   height: 110px;
+//   width: 110px;
+//   margin: 10px;
+// }
+
+// .hold {
+//   border: solid rgb(221, 111, 111) 4px;
+// }
+
+// .hovered {
+//   background: #f4f4f4;
+//   border-style: dashed;
+// }
+
+// .invible {
+//   display: none;
+// }
+
+// .div {
+//   background-color: rebeccapurple;
+//   width: 100%;
+//   height: 120px;
+// }

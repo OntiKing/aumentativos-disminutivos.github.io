@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Aumentativos y Disminutivos</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- CONTENEDOR INICIAL -->
+      
+      <div class="container__infoGame" id="container__infoGame">
+        <div class="acesLogo">
+          <img src="img/logoAces.svg" alt="" />
+        </div>
+        <div class="infoGame">
+          <div class="bookImg">
+            <img src="img/supercurioso3.png" alt="" />
+          </div>
+          <div class="detailsGame">
+            <div class="detail">
+              <h1 class="detail__title" id="title"></h1>
+              <h2 class="detail__capitulo" id="chapter"></h2>
+              <h3 class="detail__consigna" id="instructions"></h3>
+              <!-- <p class="detail__numberQuestion">
+                Number of questions:
+                <span id="textNumbersQuestions"> 10 </span>
+              </p> -->
+            </div>
+            <div class="buttonStar">
+              <div class="infoBtn__star" id="infoBtn__star">
+                <span id="starGameText"> INICIAR </span>
+                <img id="starGameImg" src="img/btn_play.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENEDOR DONDE SE DESARROLLA EL JUEGO -->
+      <div class="container__starGame container__starGame--Focus">
+
+        <div class="questionHeader">
+          <div class="imgBook">
+            <img src="img/logo.svg" alt="">
+          </div>
+          <div class="postGame">
+            <img src="img/cont_task.png" alt="">
+            <span>Diminutivo de naranja</span>
+          </div>
+        </div>
+        <div class="questionContent">
+          <div class="questionDetail">
+            <h2 id="question"></h2>
+            <img id='imgQuestion' src="" alt="">
+          </div>
+          <div class="answerDetail">
+            <img src="img/token_puzzle.png" alt="">
+          </div>
+        </div>
+        <div class="optionsAnswers">
+          <div class="answers" id="optionOne">
+           
+          </div>
+          <div class="answers" id="optionTwo">
+
+          </div>
+          <div class="answers" id="optionThree">
+
+          </div>
+        </div>
+      </div>
+ <!-- MAIN GAME -->
+
+     
+        
+      
+
+
+
+      <!-- CONTENEDOR FINAL - SCORE DEL JUEGO -->
+    <div class="container__endGame" id="container__endGame">
+      <div class="textEndGame textEndGame--hide" id="textEndGame">
+        <h2>Tu puntaje</h2>
+
+      </div>
+      <div  id="scoreContent">
+        <span class="score" id="score"></span>
+        <img class="imgScore" src="img/estrella.svg" alt="" id="imgTotalScore">
+        <!-- <Button id="actulizar">Actualizar</Button> -->
+       </div>
+       
+      <div class="starContainer" id="starContainer">
+       
+      </div>
+      <div class="btnRefrech btnRefrech--hide" id="btnRefrech">
+        <button class="btnActualizar" id="btnRefrech">Volver a Jugar </button>
+      </div>
+    </div>
+  </body>
+  <script src="script/sounds.js"></script>
+  <script src="script/starts.js"></script>
+  <script src="script/post.js"></script>
+  <script src="script/infoBtn.js"></script>
+  <script src="script/dragAndDropp.js"></script>
+ 
+ 
+</html>

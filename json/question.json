@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "question": "  DE",
+        "postQuestion": "Diminutivo de DEDO",
+        "imagen": "img/cont_puzzle_1.png",
+        "answers": {
+            "answerC": "DO",
+            "answerA": "DEDILLO",
+            "answerB": "DELLON"
+        }
+    },
+    {
+        "id": 2,
+        "question": "      SI",
+        "imagen": "img/cont_puzzle_2.png",
+        "answers": {
+            "answerC": "repuesta dos",
+            "answerA": "el dos",
+            "answerB": "el cuatro"
+        }
+    },
+    {
+        "id": 3,
+        "question": "NARAN",
+        "postQuestion": "Diminutivo de Naranja",
+        "imagen": "img/cont_puzzle_3.png",
+        "answers": {
+            "answerC": "JILLAS",
+            "answerA": "JOS",
+            "answerB": "JOTAS"
+        }
+    },
+    {
+        "id": 4,
+        "question": "SILLA",
+        "imagen": "img/cont_puzzle_4.png",
+        "answers": {
+            "answerC": "repuesta cuatro",
+            "answerA": "el dos",
+            "answerB": "el cuatro"
+        }
+    },
+    {
+        "id": 5,
+        "question": "MANDA",
+        "imagen": "img/cont_puzzle_5.png",
+        "answers": {
+            "answerC": "repuesta cinco",
+            "answerA": "el dos",
+            "answerB": "el cuatro"
+        }
+    },
+    {
+        "id": 6,
+        "question": " CASA",
+        "imagen": "img/cont_puzzle_1.png",
+        "answers": {
+            "answerC": "repuesta seis",
+            "answerA": "el dos",
+            "answerB": "el cuatro"
+        }
+    },
+    {
+        "id": 7,
+        "question": " COME",
+        "imagen":  "img/cont_puzzle_2.png",
+        "answers": {
+            "answerC": "repuesta siete",
+            "answerA": "el dos",
+            "answerB": "el cuatro"
+        }
+    },
+    {
+        "id": 8,
+        "question": "CORRE",
+        "imagen":  "img/cont_puzzle_3.png",
+        "answers": {
+            "answerC": "repuesta ocho",
+            "answerA": "el dos",
+            "answerB": "el cuatro"
+        }
+    }
+]
