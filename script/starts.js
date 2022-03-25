@@ -24,7 +24,6 @@ function updateAnswerStarts(markType) {
   if (markType === "correct") {
     $starContainer.children[currentQuestion].classList.toggle(markType);
     currentQuestion = currentQuestion + 1;
-    answerCorrect = answerCorrect + 1;
   }
   if (markType === "wrong") {
     $starContainer.children[currentQuestion].classList.toggle(markType);

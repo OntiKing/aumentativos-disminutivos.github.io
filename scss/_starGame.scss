@@ -31,7 +31,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 30px;
+
       h3 {
         color: $white;
         font-weight: 600;
@@ -52,7 +52,7 @@
       h2 {
         position: absolute;
         top: 17px;
-        left: 100px;
+        left: 105px;
         font-size: 1.2em;
         color: $color-text-game;
       }
@@ -66,7 +66,17 @@
       height: 59px;
       background-repeat: no-repeat;
       background-size: cover;
-      opacity: 0.4;
+      opacity: 0.1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      color: $color-text-game;
+      transition: all 1s ease;
+      font-weight: 800;
+    }
+    .optionsAnswer__correct {
+      opacity: 1;
     }
   }
   .optionsAnswers {

@@ -1,5 +1,5 @@
 let title, chapter, instructions;
-
+let num = 0;
 async function obtenerDatos() {
   const response = await fetch("./json/infoOda.json");
   const json = await response.json();
@@ -20,7 +20,6 @@ async function obtenerDatos() {
 obtenerDatos();
 
 /* Evento boton star */
-
 const $infoBtn = document.getElementById("infoBtn__star"),
   $container__infoGame = document.getElementById("container__infoGame"),
   $container__starGame = document.getElementById("container__starGame");
@@ -28,10 +27,11 @@ const $infoBtn = document.getElementById("infoBtn__star"),
 $infoBtn.addEventListener("click", screenActive);
 
 function screenActive() {
-  console.log("llegando");
   $container__infoGame.classList.add("hideInfoGame");
   document
     .querySelector(".container__starGame")
     .classList.remove("container__starGame--Focus");
-  seeQuestion(0);
+  seeQuestion(num);
+  console.log(num);
+  progress();
 }

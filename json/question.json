@@ -1,84 +1,112 @@
 [
     {
         "id": 1,
-        "question": "  DE",
-        "postQuestion": "Diminutivo de DEDO",
+        "question": "DE",
+        "postQuestion": "Aumentativo de Dedo",
         "imagen": "img/cont_puzzle_1.png",
         "answers": {
-            "answerC": "DO",
-            "answerA": "DEDILLO",
-            "answerB": "DELLON"
+            "answerC": "DOTE",
+            "answerA": "DILLO",
+            "answerB": "DAL"
         }
     },
     {
         "id": 2,
-        "question": "      SI",
-        "imagen": "img/cont_puzzle_2.png",
+        "question": "DE",
+        "postQuestion": "Disminutivo de Dedo",
+        "imagen": "img/cont_puzzle_1.png",
         "answers": {
-            "answerC": "repuesta dos",
-            "answerA": "el dos",
-            "answerB": "el cuatro"
+            "answerC": "DILLO",
+            "answerA": "DAL",
+            "answerB": "DOTE"
         }
     },
     {
         "id": 3,
-        "question": "NARAN",
-        "postQuestion": "Diminutivo de Naranja",
-        "imagen": "img/cont_puzzle_3.png",
+        "question": "SI",
+        "postQuestion": "Aumentativo de Silla",
+        "imagen": "img/cont_puzzle_2.png",
         "answers": {
-            "answerC": "JILLAS",
-            "answerA": "JOS",
-            "answerB": "JOTAS"
+            "answerC": "LLOTA",
+            "answerA": "LLITA",
+            "answerB": "LLAS"
         }
     },
     {
         "id": 4,
-        "question": "SILLA",
-        "imagen": "img/cont_puzzle_4.png",
+        "question": "SI",
+        "postQuestion": "Disminutivo de Silla",
+        "imagen": "img/cont_puzzle_2.png",
         "answers": {
-            "answerC": "repuesta cuatro",
-            "answerA": "el dos",
-            "answerB": "el cuatro"
+            "answerC": "LLITA",
+            "answerA": "LLOTA",
+            "answerB": "LLAS"
         }
     },
     {
         "id": 5,
-        "question": "MANDA",
-        "imagen": "img/cont_puzzle_5.png",
+        "question": "NARAN",
+        "postQuestion": "Aumentativo de Naranja",
+        "imagen": "img/cont_puzzle_3.png",
         "answers": {
-            "answerC": "repuesta cinco",
-            "answerA": "el dos",
-            "answerB": "el cuatro"
+            "answerC": "JOTAS",
+            "answerA": "JILLAS",
+            "answerB": "JOS"
         }
     },
     {
         "id": 6,
-        "question": " CASA",
-        "imagen": "img/cont_puzzle_1.png",
+        "question": "NARAN",
+        "postQuestion": "Disminutivo de Silla",
+        "imagen": "img/cont_puzzle_3.png",
         "answers": {
-            "answerC": "repuesta seis",
-            "answerA": "el dos",
-            "answerB": "el cuatro"
+            "answerC": "JILLAS",
+            "answerA": "JOTAS",
+            "answerB": "JOS"
         }
     },
     {
         "id": 7,
-        "question": " COME",
-        "imagen":  "img/cont_puzzle_2.png",
+        "question": "MOCHI",
+        "postQuestion": "Aumentativo de Mochila",
+        "imagen": "img/cont_puzzle_4.png",
         "answers": {
-            "answerC": "repuesta siete",
-            "answerA": "el dos",
-            "answerB": "el cuatro"
+            "answerC": "LAZA",
+            "answerA": "LAS",
+            "answerB": "LITA"
         }
     },
     {
         "id": 8,
-        "question": "CORRE",
-        "imagen":  "img/cont_puzzle_3.png",
+        "question": "MOCHI",
+        "postQuestion": "Disminutivo de Mochila",
+        "imagen": "img/cont_puzzle_4.png",
         "answers": {
-            "answerC": "repuesta ocho",
-            "answerA": "el dos",
-            "answerB": "el cuatro"
+            "answerC": "LITA",
+            "answerA": "LAS",
+            "answerB": "LAZA"
+        }
+    },
+    {
+        "id": 9,
+        "question": "TA",
+        "postQuestion": "Disminutivo de Taza",
+        "imagen": "img/cont_puzzle_5.png",
+        "answers": {
+            "answerC": "ZOTA",
+            "answerA": "ZAS",
+            "answerB": "CITA"
+        }
+    },
+    {
+        "id": 10,
+        "question": "TA",
+        "postQuestion": "Aumentativo de Taza",
+        "imagen": "img/cont_puzzle_5.png",
+        "answers": {
+            "answerC": "CITA",
+            "answerA": "ZAS",
+            "answerB": "ZOTA"
         }
     }
 ]

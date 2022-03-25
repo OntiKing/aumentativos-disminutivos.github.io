@@ -1,6 +1,5 @@
 let listQuestion = [];
-let optionsAnswers = [];
-let rightAnswer = "";
+let totalQuestions = 0;
 
 async function loadQuestion() {
   const APIUrl = "./json/question.json";
@@ -15,38 +14,10 @@ function showQuestion(data) {
 
   // aqui desordeno las preguntas y respuestas
   listQuestion.sort(() => Math.random() - 0.5);
+  totalQuestions = listQuestion.length;
 }
 
 loadQuestion();
-
-//enviamos la pregunta al DOM
-const seeQuestion = (num) => {
-  document.getElementById("question").textContent = listQuestion[num].question;
-
-  optionsAnswers = listQuestion[num].answers;
-
-  // ******* PARA AGREGAR UNA IMAGEN DESDE JSON
-  const $image = document.getElementById("imgQuestion");
-  $image.src = listQuestion[num].imagen;
-  // ********************************************
-
-  //   convertimos el objeto en array para poder realizar el random
-  const $optionOne = document.getElementById("optionOne");
-  const $optionTwo = document.getElementById("optionTwo");
-  const $optionThree = document.getElementById("optionThree");
-
-  let arr = Object.entries(optionsAnswers);
-  arr.sort(() => Math.random() - 0.5);
-  arr.forEach((element) => {
-    if (element[0] == "answerC") {
-      rightAnswer = element[1];
-    }
-  });
-  console.log(arr);
-  $optionOne.textContent = arr[0][1];
-  $optionTwo.textContent = arr[1][1];
-  $optionThree.textContent = arr[2][1];
-};
 
 // function showQuestion(data) {
 //   console.log(data);

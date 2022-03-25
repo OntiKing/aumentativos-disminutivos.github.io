@@ -12,3 +12,67 @@
     width: 50px;
   }
 }
+
+.correct {
+  filter: invert(25%) sepia(91%) saturate(3663%) hue-rotate(122deg)
+    brightness(94%) contrast(104%);
+  animation: moveTopStart 1000ms linear infinite;
+}
+
+.wrong {
+  filter: invert(150%) sepia(90%) saturate(1239%) hue-rotate(336deg)
+    brightness(118%) contrast(100%);
+  animation: moveTopStart 1000ms linear infinite;
+}
+
+.regular {
+  animation: moveTopScore 1000ms linear infinite;
+  filter: sepia(57%) saturate(1877%) hue-rotate(356deg) brightness(104%)
+    contrast(97%) drop-shadow(15px 8px 8px #a9a9aa);
+}
+
+.bueno {
+  animation: moveTopScore 1000ms linear infinite;
+  filter: sepia(57%) saturate(1877%) hue-rotate(356deg) brightness(104%)
+    contrast(97%) drop-shadow(15px 8px 8px #a9a9aa);
+}
+
+@keyframes moveTopStart {
+  from {
+    filter: invert(25%) sepia(91%) saturate(2018%) hue-rotate(94deg)
+      brightness(94%) contrast(104%);
+  }
+  to {
+    transform: rotateZ(360deg);
+    filter: invert(44%) sepia(40%) saturate(898%) hue-rotate(71deg)
+      brightness(88%) contrast(90%);
+    transform: scale(0.1);
+  }
+}
+
+@keyframes moveTopStart {
+  0% {
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+  50% {
+    transform: translateY(-2px);
+    transform: scale(1.1);
+  }
+  100% {
+    transform: translateY(0px);
+    transform: scale(1);
+  }
+}
+
+@keyframes moveTopScore {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

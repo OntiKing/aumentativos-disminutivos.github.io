@@ -1,0 +1,12 @@
+.progressContainer {
+  width: 75%;
+  border: 1px dotted $white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.progress {
+  border-radius: 10px;
+  width: 1%;
+  height: 10px;
+  background-color: rgb(248, 246, 241);
+}
