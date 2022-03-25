@@ -44,7 +44,7 @@ const nextQuestion = () => {
 };
 
 const resetQuestion = () => {
-  $answerDetail.style.opacity = 0.1;
+  $answerDetail.classList.remove("optionsAnswer__correct");
   $answerDetail.textContent = "";
   num = num + 1;
   console.log(num);
@@ -54,7 +54,6 @@ const resetQuestion = () => {
 };
 
 // verificamos que opcion eligio el usuario
-
 $optionsAnswers.addEventListener("click", (e) => {
   if (e.target.textContent === rightAnswer) {
     $answerDetail.classList.add("optionsAnswer__correct");

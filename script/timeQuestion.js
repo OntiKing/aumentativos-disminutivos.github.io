@@ -1,4 +1,4 @@
-let tiempo = 150;
+let tiempo = 200;
 let width = 1;
 
 function progress() {
