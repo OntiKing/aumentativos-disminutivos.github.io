@@ -297,30 +297,32 @@ body {
 }
 
 .container__starGame .questionContent .optionsAnswer__correct {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
   opacity: 1;
-  -webkit-animation: Move 1s 1;
-          animation: Move 1s 1;
+  -webkit-animation: Move 2s 1 ease-in-out;
+          animation: Move 2s 1 ease-in-out;
 }
 
 @-webkit-keyframes Move {
   0% {
-    -webkit-transform: perspective(10px) translateZ(10px);
-            transform: perspective(10px) translateZ(10px);
+    -webkit-transform: rotate(0 deg);
+            transform: rotate(0 deg);
   }
   50% {
-    -webkit-transform: perspective(10px) translateZ(-5px);
-            transform: perspective(10px) translateZ(-5px);
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
 }
 
 @keyframes Move {
   0% {
-    -webkit-transform: perspective(10px) translateZ(10px);
-            transform: perspective(10px) translateZ(10px);
+    -webkit-transform: rotate(0 deg);
+            transform: rotate(0 deg);
   }
   50% {
-    -webkit-transform: perspective(10px) translateZ(-5px);
-            transform: perspective(10px) translateZ(-5px);
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
 }
 
@@ -347,8 +349,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   color: #555554;
   font-weight: 700;
   text-align: center;

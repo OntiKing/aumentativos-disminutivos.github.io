@@ -76,15 +76,16 @@
       font-weight: 800;
     }
     .optionsAnswer__correct {
+      transform: translateX(-10px);
       opacity: 1;
-      animation: Move 1s 1;
+      animation: Move 2s 1 ease-in-out;
     }
     @keyframes Move {
       0% {
-        transform: perspective(10px) translateZ(10px);
+        transform: rotate(0 deg);
       }
       50% {
-        transform: perspective(10px) translateZ(-5px);
+        transform: rotate(30deg);
       }
     }
   }
@@ -101,7 +102,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       cursor: pointer;
-      transition: all 3s ease;
+      transition: all 0.5s ease;
       color: $color-text-game;
       font-weight: 700;
       text-align: center;

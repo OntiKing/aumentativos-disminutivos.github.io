@@ -4,7 +4,7 @@ let rightAnswer = "";
 
 const $optionsAnswers = document.getElementById("optionsAnswers");
 const $answerDetail = document.getElementById("answerDetail");
-
+let $answerActive = "";
 const seeQuestion = (num) => {
   document.getElementById("question").textContent = listQuestion[num].question;
   document.getElementById("postGame__Text").textContent =
@@ -39,6 +39,7 @@ const nextQuestion = () => {
   if (num === totalQuestions - 1) {
     console.log("Mostrar pantalla de estrellas");
   } else {
+    $answerActive.style.opacity = 1;
     resetQuestion();
   }
 };
@@ -53,6 +54,8 @@ const resetQuestion = () => {
 // verificamos que opcion eligio el usuario
 $optionsAnswers.addEventListener("click", (e) => {
   if (e.target.textContent === rightAnswer) {
+    $answerActive = document.getElementById(`${e.target.id}`);
+    $answerActive.style.opacity = 0;
     answerCorrect();
   } else {
     answerIncorrect();
