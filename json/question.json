@@ -16,8 +16,8 @@
         "postQuestion": "Disminutivo de Dedo",
         "imagen": "img/cont_puzzle_1.png",
         "answers": {
-            "answerC": "DILLO",
             "answerA": "DAL",
+            "answerC": "DILLO",
             "answerB": "DOTE"
         }
     },
@@ -27,9 +27,9 @@
         "postQuestion": "Aumentativo de Silla",
         "imagen": "img/cont_puzzle_2.png",
         "answers": {
-            "answerC": "LLOTA",
             "answerA": "LLITA",
-            "answerB": "LLAS"
+            "answerB": "LLAS",
+            "answerC": "LLOTA"
         }
     },
     {
@@ -57,12 +57,12 @@
     {
         "id": 6,
         "question": "NARAN",
-        "postQuestion": "Disminutivo de Silla",
+        "postQuestion": "Disminutivo de Naranja",
         "imagen": "img/cont_puzzle_3.png",
         "answers": {
-            "answerC": "JILLAS",
             "answerA": "JOTAS",
-            "answerB": "JOS"
+            "answerB": "JOS",
+            "answerC": "JILLAS"
         }
     },
     {
@@ -82,8 +82,8 @@
         "postQuestion": "Disminutivo de Mochila",
         "imagen": "img/cont_puzzle_4.png",
         "answers": {
-            "answerC": "LITA",
             "answerA": "LAS",
+            "answerC": "LITA",
             "answerB": "LAZA"
         }
     },
@@ -93,9 +93,9 @@
         "postQuestion": "Disminutivo de Taza",
         "imagen": "img/cont_puzzle_5.png",
         "answers": {
-            "answerC": "ZOTA",
+            "answerC": "CITA",
             "answerA": "ZAS",
-            "answerB": "CITA"
+            "answerB": "ZOTA"
         }
     },
     {
@@ -104,9 +104,9 @@
         "postQuestion": "Aumentativo de Taza",
         "imagen": "img/cont_puzzle_5.png",
         "answers": {
-            "answerC": "CITA",
-            "answerA": "ZAS",
-            "answerB": "ZOTA"
+            "answerC": "ZOTA",
+            "answerA": "CITA",
+            "answerB": "ZAS"
         }
     }
 ]

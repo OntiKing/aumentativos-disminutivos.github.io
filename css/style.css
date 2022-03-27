@@ -360,6 +360,39 @@ body {
   background-image: url("../img/token_puzzle_hover.png");
 }
 
+.container__starGame .optionsAnswers .answersCorrect {
+  opacity: 0;
+  -webkit-animation: incorrectAnswer 1s 1 ease-in-out;
+          animation: incorrectAnswer 1s 1 ease-in-out;
+}
+
+.container__starGame .optionsAnswers .answersIncorrect {
+  -webkit-animation: incorrectAnswer 1s 1 ease-in-out;
+          animation: incorrectAnswer 1s 1 ease-in-out;
+}
+
+@-webkit-keyframes incorrectAnswer {
+  0% {
+    -webkit-transform: rotate(0 deg);
+            transform: rotate(0 deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+
+@keyframes incorrectAnswer {
+  0% {
+    -webkit-transform: rotate(0 deg);
+            transform: rotate(0 deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+
 .container__starGame .optionsAnswers .answersOne {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);

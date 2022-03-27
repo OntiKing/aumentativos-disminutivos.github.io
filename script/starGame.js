@@ -39,7 +39,6 @@ const nextQuestion = () => {
   if (num === totalQuestions - 1) {
     console.log("Mostrar pantalla de estrellas");
   } else {
-    $answerActive.style.opacity = 1;
     resetQuestion();
   }
 };
@@ -55,9 +54,11 @@ const resetQuestion = () => {
 $optionsAnswers.addEventListener("click", (e) => {
   if (e.target.textContent === rightAnswer) {
     $answerActive = document.getElementById(`${e.target.id}`);
-    $answerActive.style.opacity = 0;
+    $answerActive.classList.add("answersCorrect");
     answerCorrect();
   } else {
+    $answerActive = document.getElementById(`${e.target.id}`);
+    $answerActive.classList.add("answersIncorrect");
     answerIncorrect();
   }
 });
@@ -69,6 +70,7 @@ const answerCorrect = () => {
   width = 100;
   setTimeout(() => {
     nextQuestion();
+    $answerActive.classList.remove("answersCorrect");
     progress();
   }, 3000);
 };
@@ -78,6 +80,7 @@ const answerIncorrect = () => {
   updateAnswerStarts("wrong");
   setTimeout(() => {
     nextQuestion();
+    $answerActive.classList.remove("answersIncorrect");
     progress();
   }, 2000);
 };

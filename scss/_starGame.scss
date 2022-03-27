@@ -111,6 +111,22 @@
         background-image: url("../img/token_puzzle_hover.png");
       }
     }
+    .answersCorrect {
+      opacity: 0;
+      animation: incorrectAnswer 1s 1 ease-in-out;
+    }
+
+    .answersIncorrect {
+      animation: incorrectAnswer 1s 1 ease-in-out;
+    }
+    @keyframes incorrectAnswer {
+      0% {
+        transform: rotate(0 deg);
+      }
+      50% {
+        transform: rotate(30deg);
+      }
+    }
     .answersOne {
       transform: translateY(10px);
       transform: rotate(3deg);
