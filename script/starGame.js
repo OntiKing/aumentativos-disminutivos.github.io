@@ -46,7 +46,7 @@ const nextQuestion = () => {
 const resetQuestion = () => {
   $answerDetail.classList.remove("optionsAnswer__correct");
   $answerDetail.textContent = "";
-
+  $optionsAnswers.focus();
   num = num + 1;
   seeQuestion(num);
   activeNextAnswer = 0;
@@ -76,8 +76,7 @@ const answerCorrect = () => {
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersCorrect");
-    $answerActive.classList.remove("answers");
-    $answerActive.classList.add("answers");
+
     progress();
   }, 3000);
 };
@@ -88,8 +87,7 @@ const answerIncorrect = () => {
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersIncorrect");
-    $answerActive.classList.remove("answers");
-    $answerActive.classList.add("answers");
+
     progress();
   }, 2000);
 };
