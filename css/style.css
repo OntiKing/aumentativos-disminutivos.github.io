@@ -298,6 +298,30 @@ body {
 
 .container__starGame .questionContent .optionsAnswer__correct {
   opacity: 1;
+  -webkit-animation: Move 1s 1;
+          animation: Move 1s 1;
+}
+
+@-webkit-keyframes Move {
+  0% {
+    -webkit-transform: perspective(10px) translateZ(10px);
+            transform: perspective(10px) translateZ(10px);
+  }
+  50% {
+    -webkit-transform: perspective(10px) translateZ(-5px);
+            transform: perspective(10px) translateZ(-5px);
+  }
+}
+
+@keyframes Move {
+  0% {
+    -webkit-transform: perspective(10px) translateZ(10px);
+            transform: perspective(10px) translateZ(10px);
+  }
+  50% {
+    -webkit-transform: perspective(10px) translateZ(-5px);
+            transform: perspective(10px) translateZ(-5px);
+  }
 }
 
 .container__starGame .optionsAnswers {

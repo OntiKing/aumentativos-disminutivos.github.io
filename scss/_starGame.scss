@@ -77,6 +77,15 @@
     }
     .optionsAnswer__correct {
       opacity: 1;
+      animation: Move 1s 1;
+    }
+    @keyframes Move {
+      0% {
+        transform: perspective(10px) translateZ(10px);
+      }
+      50% {
+        transform: perspective(10px) translateZ(-5px);
+      }
     }
   }
   .optionsAnswers {
