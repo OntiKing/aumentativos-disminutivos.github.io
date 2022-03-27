@@ -47,26 +47,34 @@ const resetQuestion = () => {
   $answerDetail.classList.remove("optionsAnswer__correct");
   $answerDetail.textContent = "";
   num = num + 1;
-  console.log(num);
-  width = 1;
-  progress();
   seeQuestion(num);
 };
 
 // verificamos que opcion eligio el usuario
 $optionsAnswers.addEventListener("click", (e) => {
   if (e.target.textContent === rightAnswer) {
-    $answerDetail.classList.add("optionsAnswer__correct");
-    $answerDetail.textContent = rightAnswer;
-    updateAnswerStarts("correct");
-    setTimeout(() => {
-      nextQuestion();
-    }, 3000);
+    answerCorrect();
   } else {
-    console.log("respuesta incorrecta");
-    updateAnswerStarts("wrong");
-    setTimeout(() => {
-      nextQuestion();
-    }, 2000);
+    answerIncorrect();
   }
 });
+
+const answerCorrect = () => {
+  $answerDetail.classList.add("optionsAnswer__correct");
+  $answerDetail.textContent = rightAnswer;
+  updateAnswerStarts("correct");
+  width = 100;
+  setTimeout(() => {
+    nextQuestion();
+    progress();
+  }, 3000);
+};
+
+const answerIncorrect = () => {
+  width = 100;
+  updateAnswerStarts("wrong");
+  setTimeout(() => {
+    nextQuestion();
+    progress();
+  }, 2000);
+};
