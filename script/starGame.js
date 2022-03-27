@@ -46,6 +46,7 @@ const nextQuestion = () => {
 const resetQuestion = () => {
   $answerDetail.classList.remove("optionsAnswer__correct");
   $answerDetail.textContent = "";
+
   num = num + 1;
   seeQuestion(num);
   activeNextAnswer = 0;
@@ -85,6 +86,7 @@ const answerIncorrect = () => {
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersIncorrect");
+    $answerActive.style.backgroundImage = 'url("../img/token_puzzle.png")';
     progress();
   }, 2000);
 };
