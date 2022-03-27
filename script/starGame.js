@@ -1,7 +1,7 @@
 //enviamos la pregunta al DOM
 let optionsAnswers = [];
 let rightAnswer = "";
-
+let activeNextAnswer = 0;
 const $optionsAnswers = document.getElementById("optionsAnswers");
 const $answerDetail = document.getElementById("answerDetail");
 let $answerActive = "";
@@ -48,18 +48,22 @@ const resetQuestion = () => {
   $answerDetail.textContent = "";
   num = num + 1;
   seeQuestion(num);
+  activeNextAnswer = 0;
 };
 
 // verificamos que opcion eligio el usuario
 $optionsAnswers.addEventListener("click", (e) => {
-  if (e.target.textContent === rightAnswer) {
-    $answerActive = document.getElementById(`${e.target.id}`);
-    $answerActive.classList.add("answersCorrect");
-    answerCorrect();
-  } else {
-    $answerActive = document.getElementById(`${e.target.id}`);
-    $answerActive.classList.add("answersIncorrect");
-    answerIncorrect();
+  if (activeNextAnswer === 0) {
+    if (e.target.textContent === rightAnswer) {
+      $answerActive = document.getElementById(`${e.target.id}`);
+      $answerActive.classList.add("answersCorrect");
+      answerCorrect();
+    } else {
+      $answerActive = document.getElementById(`${e.target.id}`);
+      $answerActive.classList.add("answersIncorrect");
+      answerIncorrect();
+    }
+    activeNextAnswer = 1;
   }
 });
 
