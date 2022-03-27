@@ -76,6 +76,7 @@ const answerCorrect = () => {
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersCorrect");
+    $answerActive.style.backgroundImage.url = "../img/token_puzzle.png";
     progress();
   }, 3000);
 };
@@ -86,7 +87,7 @@ const answerIncorrect = () => {
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersIncorrect");
-    $answerActive.style.backgroundImage = 'url("../img/token_puzzle.png")';
+    $answerActive.style.backgroundImage.url = "../img/token_puzzle.png";
     progress();
   }, 2000);
 };
