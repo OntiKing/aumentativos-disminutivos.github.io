@@ -79,22 +79,27 @@
       </div>
  <!-- MAIN GAME -->
       <!-- CONTENEDOR FINAL - SCORE DEL JUEGO -->
-    <div class="container__endGame" id="container__endGame">
-      <div class="textEndGame textEndGame--hide" id="textEndGame">
-        <h2>Tu puntaje</h2>
-
+    <div class="container__endGame container__endGame--focus" id="container__endGame">
+      <div class="imgBook">
+        <img src="img/logo.svg" alt="">
       </div>
-      <div  id="scoreContent">
-        <span class="score" id="score"></span>
-        <img class="imgScore" src="img/estrella.svg" alt="" id="imgTotalScore">
-        <!-- <Button id="actulizar">Actualizar</Button> -->
-       </div>
-       
-      <div class="starContainer" id="starContainer">
-       
-      </div>
-      <div class="btnRefrech btnRefrech--hide" id="btnRefrech">
-        <button class="btnActualizar" id="btnRefrech">Volver a Jugar </button>
+      <div class="detailEndGame">
+        <div class="textEndGame textEndGame--hide" id="textEndGame">
+          <h2>Tu puntaje</h2>
+  
+        </div>
+        <div class="scoreContent" id="scoreContent">
+          <span class="score" id="score">1</span>
+          <img class="imgScore" src="img/estrella.svg" alt="" id="imgTotalScore">
+          <!-- <Button id="actulizar">Actualizar</Button> -->
+         </div>
+         
+        <div class="starContainerEnd" id="starContainerEnd">
+         
+        </div>
+        <div class="btnRefrech btnRefrech--hide" id="btnRefrech">
+          <button class="btnActualizar" id="btnRefrech">Volver a Jugar </button>
+        </div>
       </div>
     </div>
   </body>
@@ -105,5 +110,5 @@
   <script src="script/conect.js"></script>
   <script src="script/starGame.js"></script>
  <script src="script/timeQuestion.js"></script>
- 
+ <script src="script/endGame.js"></script>
 </html>

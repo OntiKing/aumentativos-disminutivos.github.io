@@ -25,18 +25,6 @@
   animation: moveTopStart 1000ms linear infinite;
 }
 
-.regular {
-  animation: moveTopScore 1000ms linear infinite;
-  filter: sepia(57%) saturate(1877%) hue-rotate(356deg) brightness(104%)
-    contrast(97%) drop-shadow(15px 8px 8px #a9a9aa);
-}
-
-.bueno {
-  animation: moveTopScore 1000ms linear infinite;
-  filter: sepia(57%) saturate(1877%) hue-rotate(356deg) brightness(104%)
-    contrast(97%) drop-shadow(15px 8px 8px #a9a9aa);
-}
-
 @keyframes moveTopStart {
   from {
     filter: invert(25%) sepia(91%) saturate(2018%) hue-rotate(94deg)
@@ -61,18 +49,6 @@
   }
   100% {
     transform: translateY(0px);
-    transform: scale(1);
-  }
-}
-
-@keyframes moveTopScore {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
     transform: scale(1);
   }
 }

@@ -2,6 +2,8 @@
 let optionsAnswers = [];
 let rightAnswer = "";
 let activeNextAnswer = 0;
+let userAnswers = [];
+
 const $optionsAnswers = document.getElementById("optionsAnswers");
 const $answerDetail = document.getElementById("answerDetail");
 let $answerActive = "";
@@ -37,7 +39,13 @@ const seeQuestion = (num) => {
 //Vamos la siguiente pregunta y se reinicia el contador
 const nextQuestion = () => {
   if (num === totalQuestions - 1) {
-    console.log("Mostrar pantalla de estrellas");
+    document
+      .querySelector(".container__starGame")
+      .classList.add("container__starGame--Focus");
+    document
+      .getElementById("container__endGame")
+      .classList.remove("container__endGame--focus");
+    mostrarResult();
   } else {
     resetQuestion();
   }
@@ -56,12 +64,16 @@ const resetQuestion = () => {
 $optionsAnswers.addEventListener("click", (e) => {
   if (activeNextAnswer === 0) {
     if (e.target.textContent === rightAnswer) {
+      soundCorrect.play();
       $answerActive = document.getElementById(`${e.target.id}`);
       $answerActive.classList.add("answersCorrect");
+      userAnswers.push(1);
       answerCorrect();
     } else {
+      soundIncorrect.play();
       $answerActive = document.getElementById(`${e.target.id}`);
       $answerActive.classList.add("answersIncorrect");
+      userAnswers.push(0);
       answerIncorrect();
     }
     activeNextAnswer = 1;

@@ -27,7 +27,9 @@ const $infoBtn = document.getElementById("infoBtn__star"),
 $infoBtn.addEventListener("click", screenActive);
 
 function screenActive() {
+  soundAmbient.play();
   $container__infoGame.classList.add("hideInfoGame");
+  //HABILITAR ESTO PARA QUE SE PUEDE VER EL CONTENEDOR DE JUEGO
   document
     .querySelector(".container__starGame")
     .classList.remove("container__starGame--Focus");

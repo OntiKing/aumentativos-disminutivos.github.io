@@ -30,18 +30,3 @@ function updateAnswerStarts(markType) {
     currentQuestion = currentQuestion + 1;
   }
 }
-
-//09 Crear estrella para el contenedor final
-const $score = document.getElementById("score");
-const $imgTotalScore = document.getElementById("imgTotalScore");
-function createStarEnd() {
-  //creamos la imagen final del resultado
-
-  $scoreContent.classList.add("scoreContent");
-  document.getElementById("score").textContent = answerCorrect;
-  if (answerCorrect <= 3) {
-    $imgTotalScore.classList.add("regular");
-  } else {
-    $imgTotalScore.classList.add("bueno");
-  }
-}
