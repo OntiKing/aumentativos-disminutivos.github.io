@@ -148,6 +148,7 @@ body {
   background-color: #00b7bd;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .container__infoGame .infoGame .detailsGame .buttonStar .infoBtn__star:hover {
@@ -224,6 +225,44 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.container__starGame .questionHeader .postGame img {
+  position: absolute;
+  width: 54px;
+  left: 30px;
+  top: -60px;
+  -webkit-filter: drop-shadow(0 4px 3px rgba(12, 12, 12, 0.7));
+          filter: drop-shadow(0 4px 3px rgba(12, 12, 12, 0.7));
+}
+
+.container__starGame .questionHeader .postGame .animationDinaTeo {
+  -webkit-animation: moveDinaTeo 2s linear 1;
+          animation: moveDinaTeo 2s linear 1;
+}
+
+@-webkit-keyframes moveDinaTeo {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+}
+
+@keyframes moveDinaTeo {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
 }
 
 .container__starGame .questionHeader .postGame h3 {
@@ -354,6 +393,29 @@ body {
 
 .container__starGame .optionsAnswers .answers:hover {
   background-image: url("../img/token_puzzle_hover.png");
+}
+
+.container__starGame .optionsAnswers .answerDetail--see {
+  -webkit-animation: seeContent 1 1s ease;
+          animation: seeContent 1 1s ease;
+}
+
+@-webkit-keyframes seeContent {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes seeContent {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 .container__starGame .optionsAnswers .answersCorrect {

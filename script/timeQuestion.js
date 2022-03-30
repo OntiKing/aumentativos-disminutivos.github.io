@@ -1,4 +1,4 @@
-let tiempo = 20 * 10;
+let tiempo = 10 * 10;
 let width = 1;
 
 function progress() {

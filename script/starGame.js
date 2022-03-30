@@ -3,9 +3,11 @@ let optionsAnswers = [];
 let rightAnswer = "";
 let activeNextAnswer = 0;
 let userAnswers = [];
-
+let img = "";
 const $optionsAnswers = document.getElementById("optionsAnswers");
 const $answerDetail = document.getElementById("answerDetail");
+const $answers = document.querySelectorAll(".answers");
+
 let $answerActive = "";
 const seeQuestion = (num) => {
   document.getElementById("question").textContent = listQuestion[num].question;
@@ -45,6 +47,7 @@ const nextQuestion = () => {
     document
       .getElementById("container__endGame")
       .classList.remove("container__endGame--focus");
+
     mostrarResult();
   } else {
     resetQuestion();
@@ -52,28 +55,57 @@ const nextQuestion = () => {
 };
 
 const resetQuestion = () => {
+  const $imgDinaTeo = document.getElementById("imgDinaTeo");
+
+  $imgDinaTeo.classList.remove("animationDinaTeo");
   $answerDetail.classList.remove("optionsAnswer__correct");
   $answerDetail.textContent = "";
   $optionsAnswers.focus();
+
+  //Aqui cambiamos la imagen de teo u dina despues de una pregunta
+
+  if (img === "teo") {
+    $imgDinaTeo.src = "img/teo.svg";
+    $imgDinaTeo.classList.add("animationDinaTeo");
+    img = "dina";
+  } else {
+    $imgDinaTeo.src = "img/dina.svg";
+    $imgDinaTeo.classList.add("animationDinaTeo");
+    img = "teo";
+  }
+
   num = num + 1;
+
+  //aqui recorre los elementos answer para darles el evento de aparecer
+  $answers.forEach((element) => {
+    element.classList.add("answerDetail--see");
+  });
   seeQuestion(num);
   activeNextAnswer = 0;
 };
 
 // verificamos que opcion eligio el usuario
 $optionsAnswers.addEventListener("click", (e) => {
+  //eliminar el evento de aparecer de las answer
+  $answers.forEach((element) => {
+    element.classList.remove("answerDetail--see");
+  });
+
   if (activeNextAnswer === 0) {
     if (e.target.textContent === rightAnswer) {
       soundCorrect.play();
       $answerActive = document.getElementById(`${e.target.id}`);
       $answerActive.classList.add("answersCorrect");
+
       userAnswers.push(1);
+
       answerCorrect();
     } else {
       soundIncorrect.play();
       $answerActive = document.getElementById(`${e.target.id}`);
       $answerActive.classList.add("answersIncorrect");
       userAnswers.push(0);
+
       answerIncorrect();
     }
     activeNextAnswer = 1;
@@ -83,7 +115,9 @@ $optionsAnswers.addEventListener("click", (e) => {
 const answerCorrect = () => {
   $answerDetail.classList.add("optionsAnswer__correct");
   $answerDetail.textContent = rightAnswer;
+
   updateAnswerStarts("correct");
+
   width = 100;
   setTimeout(() => {
     nextQuestion();
@@ -96,6 +130,7 @@ const answerCorrect = () => {
 const answerIncorrect = () => {
   width = 100;
   updateAnswerStarts("wrong");
+
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersIncorrect");

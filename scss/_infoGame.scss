@@ -65,6 +65,7 @@
           margin: auto;
           background-color: $color-primary;
           transition: all 0.3s ease;
+          cursor: pointer;
           &:hover {
             cursor: pointer;
             background-color: $color-second;
