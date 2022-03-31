@@ -65,6 +65,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .imgQuestionContent {
+      width: 100px;
+      img {
+        width: 100%;
+        transform: translateX(11px) translateY(2px);
+      }
+    }
     .questionDetail {
       position: relative;
       display: flex;
@@ -72,17 +79,17 @@
       align-items: center;
       h2 {
         position: absolute;
-        top: 17px;
-        left: 105px;
         font-size: 1.2em;
         color: $color-text-game;
       }
       img {
-        width: 200px;
+        width: 115px;
       }
     }
     .answerDetail {
       background-image: url("../img/token_puzzle.png");
+      background-repeat: no-repeat;
+      background-size: contain;
       width: 100px;
       height: 59px;
       background-repeat: no-repeat;
@@ -98,7 +105,7 @@
     }
 
     .optionsAnswer__correct {
-      transform: translateX(-10px);
+      transform: translateX(-12px);
       opacity: 1;
       animation: Move 1.5s 1 ease-in-out;
     }

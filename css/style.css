@@ -92,7 +92,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .container__infoGame .infoGame .bookImg img {
@@ -290,6 +290,16 @@ body {
           align-items: center;
 }
 
+.container__starGame .questionContent .imgQuestionContent {
+  width: 100px;
+}
+
+.container__starGame .questionContent .imgQuestionContent img {
+  width: 100%;
+  -webkit-transform: translateX(11px) translateY(2px);
+          transform: translateX(11px) translateY(2px);
+}
+
 .container__starGame .questionContent .questionDetail {
   position: relative;
   display: -webkit-box;
@@ -305,18 +315,18 @@ body {
 
 .container__starGame .questionContent .questionDetail h2 {
   position: absolute;
-  top: 17px;
-  left: 105px;
   font-size: 1.2em;
   color: #555554;
 }
 
 .container__starGame .questionContent .questionDetail img {
-  width: 200px;
+  width: 115px;
 }
 
 .container__starGame .questionContent .answerDetail {
   background-image: url("../img/token_puzzle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 100px;
   height: 59px;
   background-repeat: no-repeat;
@@ -339,8 +349,8 @@ body {
 }
 
 .container__starGame .questionContent .optionsAnswer__correct {
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  -webkit-transform: translateX(-12px);
+          transform: translateX(-12px);
   opacity: 1;
   -webkit-animation: Move 1.5s 1 ease-in-out;
           animation: Move 1.5s 1 ease-in-out;
@@ -574,7 +584,7 @@ body {
 
 .container__endGame .detailEndGame .starContainerEnd {
   margin-top: 60px;
-  width: 100%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,6 +594,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 5px;
 }
 
@@ -799,8 +811,8 @@ body {
 }
 
 .progressContainer {
-  width: 75%;
-  border: 1px dotted #fff;
+  width: 270px;
+  border: 1.5px solid #fff;
   border-radius: 10px;
   margin-bottom: 30px;
 }
@@ -810,5 +822,206 @@ body {
   width: 1%;
   height: 10px;
   background-color: #f8f6f1;
+}
+
+@media (min-width: 760px) {
+  .container__infoGame {
+    padding: 0 80px;
+  }
+  .container__infoGame .infoGame {
+    width: 70%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 30px 0;
+  }
+  .container__infoGame .infoGame .bookImg {
+    width: 30%;
+    text-align: center;
+  }
+  .container__infoGame .infoGame .bookImg img {
+    width: 180px;
+  }
+  .container__infoGame .infoGame .detailsGame {
+    width: 60%;
+  }
+  .container__infoGame .infoGame .detailsGame .detail h2 {
+    font-size: 1.3em;
+  }
+  .container__infoGame .infoGame .detailsGame .detail h3 {
+    font-size: 1.2em;
+  }
+  .container__starGame .questionHeader {
+    width: 80%;
+  }
+  .container__starGame .questionHeader .imgBook img {
+    width: 230px;
+  }
+  .container__starGame .questionHeader .postGame {
+    width: 400px;
+    height: 60px;
+    font-size: 1.2em;
+  }
+  .container__starGame .questionHeader .postGame img {
+    width: 70px;
+    top: -75px;
+  }
+  .container__starGame .progressContainer {
+    width: 370px;
+  }
+  .container__starGame .progressContainer .progress {
+    height: 12px;
+  }
+  .container__starGame .questionContent .imgQuestionContent {
+    width: 122px;
+  }
+  .container__starGame .questionContent .imgQuestionContent img {
+    -webkit-transform: translateX(13px) translateY(2px);
+            transform: translateX(13px) translateY(2px);
+  }
+  .container__starGame .questionContent .questionDetail img {
+    width: 140px;
+  }
+  .container__starGame .questionContent .answerDetail {
+    width: 120px;
+    height: 71px;
+  }
+  .container__starGame .optionsAnswers .answers {
+    width: 120px;
+    height: 71px;
+  }
+  .container__endGame .detailEndGame {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .container__infoGame {
+    width: 90%;
+    padding: 15px;
+  }
+  .container__infoGame .infoGame {
+    width: 100%;
+  }
+  .container__infoGame .infoGame .bookImg img {
+    width: 180px;
+  }
+  .container__starGame .questionHeader {
+    width: 90%;
+  }
+  .container__starGame .questionHeader .imgBook img {
+    width: 250px;
+  }
+  .container__starGame .questionHeader .postGame {
+    width: 500px;
+    height: 60px;
+    font-size: 1.2em;
+  }
+  .container__starGame .questionHeader .postGame img {
+    width: 70px;
+    top: -75px;
+  }
+  .container__starGame .progressContainer {
+    margin-top: 10px;
+    width: 400px;
+  }
+  .container__starGame .progressContainer .progress {
+    height: 12px;
+  }
+  .container__starGame .questionContent .imgQuestionContent {
+    width: 132px;
+  }
+  .container__starGame .questionContent .imgQuestionContent img {
+    -webkit-transform: translateX(14px) translateY(2px);
+            transform: translateX(14px) translateY(2px);
+  }
+  .container__starGame .questionContent .questionDetail img {
+    width: 150px;
+  }
+  .container__starGame .questionContent .answerDetail {
+    width: 135px;
+    height: 80px;
+  }
+  .container__starGame .questionContent .optionsAnswer__correct {
+    -webkit-transform: translateX(-16px);
+            transform: translateX(-16px);
+    opacity: 1;
+    -webkit-animation: Move 1.5s 1 ease-in-out;
+            animation: Move 1.5s 1 ease-in-out;
+  }
+  .container__starGame .optionsAnswers .answers {
+    width: 135px;
+    height: 80px;
+  }
+  .container__starGame .starContainer img {
+    width: 35px;
+  }
+  .container__endGame .detailEndGame {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container__infoGame {
+    width: 55%;
+    padding: 35px;
+  }
+  .container__infoGame .acesLogo img {
+    width: 130px;
+  }
+  .container__infoGame .infoGame .bookImg img {
+    width: 200px;
+  }
+  .container__infoGame .infoGame .detailsGame .detail {
+    margin-bottom: 50px;
+  }
+  .container__starGame .questionHeader {
+    width: 90%;
+  }
+  .container__starGame .questionHeader .imgBook img {
+    width: 300px;
+  }
+  .container__starGame .questionHeader .postGame {
+    width: 650px;
+    height: 60px;
+    font-size: 1.2em;
+  }
+  .container__starGame .questionHeader .postGame img {
+    width: 80px;
+    left: 80px;
+    top: -90px;
+  }
+  .container__starGame .progressContainer {
+    margin: 5px 0 60px 0;
+    width: 450px;
+  }
+  .container__starGame .progressContainer .progress {
+    height: 14px;
+  }
+  .container__starGame .questionContent .imgQuestionContent {
+    width: 152px;
+  }
+  .container__starGame .questionContent .imgQuestionContent img {
+    -webkit-transform: translateX(14px) translateY(2px);
+            transform: translateX(14px) translateY(2px);
+  }
+  .container__starGame .questionContent .questionDetail img {
+    width: 174px;
+  }
+  .container__starGame .questionContent .answerDetail {
+    width: 150px;
+    height: 90px;
+  }
+  .container__starGame .optionsAnswers .answers {
+    width: 150px;
+    height: 90px;
+  }
+  .container__starGame .starContainer img {
+    width: 35px;
+  }
+  .container__endGame .detailEndGame {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

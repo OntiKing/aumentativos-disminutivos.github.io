@@ -54,10 +54,11 @@
     }
     .starContainerEnd {
       margin-top: 60px;
-      width: 100%;
+      width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       gap: 5px;
       img {
         width: 25px;

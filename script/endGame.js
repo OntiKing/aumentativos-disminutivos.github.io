@@ -8,7 +8,6 @@ function resultEnd() {
   //creamos la imagen final del resultado
 
   if (userAnswers.length <= 3) {
-    console.log("llega");
     $imgTotalScore.classList.add("regular");
   } else {
     $imgTotalScore.classList.add("bueno");
@@ -29,7 +28,7 @@ function createStartsEnd() {
 
 const mostrarResult = () => {
   resultEnd();
-  document.getElementById("score").textContent = userAnswers.length;
+  document.getElementById("score").textContent = correctAnswersTotal;
   userAnswers.forEach((element) => {
     if (element === 1) {
       markTypeEnd = "correct";
@@ -40,3 +39,9 @@ const mostrarResult = () => {
     }
   });
 };
+
+//boton para poder reiniciar el juego
+const $btnRefrech = document.getElementById("btnRefrech");
+$btnRefrech.addEventListener("click", () => {
+  location.reload();
+});

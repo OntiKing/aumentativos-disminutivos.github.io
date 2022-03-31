@@ -5,7 +5,7 @@ let activeNextAnswer = 0;
 let userAnswers = [];
 let img = "";
 let reinciarAuto = 1;
-
+let correctAnswersTotal = 0;
 const $optionsAnswers = document.getElementById("optionsAnswers");
 const $answerDetail = document.getElementById("answerDetail");
 const $answers = document.querySelectorAll(".answers");
@@ -129,6 +129,7 @@ const answerCorrect = () => {
   $answerDetail.classList.add("optionsAnswer__correct");
   $answerDetail.textContent = rightAnswer;
   updateAnswerStarts("correct");
+  correctAnswersTotal = correctAnswersTotal + 1;
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersCorrect");
@@ -139,7 +140,8 @@ const answerIncorrect = () => {
   updateAnswerStarts("wrong");
   setTimeout(() => {
     nextQuestion();
-
-    $answerActive.classList.remove("answersIncorrect");
+    try {
+      $answerActive.classList.remove("answersIncorrect");
+    } catch (error) {}
   }, 2000);
 };
