@@ -4,6 +4,8 @@ let rightAnswer = "";
 let activeNextAnswer = 0;
 let userAnswers = [];
 let img = "";
+let reinciarAuto = 1;
+
 const $optionsAnswers = document.getElementById("optionsAnswers");
 const $answerDetail = document.getElementById("answerDetail");
 const $answers = document.querySelectorAll(".answers");
@@ -50,18 +52,26 @@ const nextQuestion = () => {
 
     mostrarResult();
   } else {
+    // PARTE DEL TIMEQUESTION - verificar si fue por tiempo cumplido o por el click
+    if (reinciarAuto === 1) {
+      reiniarAuto = 0;
+    } else {
+      progress();
+      reinciarAuto = 1;
+    }
+
     resetQuestion();
   }
 };
 
 const resetQuestion = () => {
   const $imgDinaTeo = document.getElementById("imgDinaTeo");
-
   $imgDinaTeo.classList.remove("animationDinaTeo");
   $answerDetail.classList.remove("optionsAnswer__correct");
   $answerDetail.textContent = "";
   $optionsAnswers.focus();
-
+  //para que el contador no reinicie automaticamtente
+  reinciarAuto = 1;
   //Aqui cambiamos la imagen de teo u dina despues de una pregunta
 
   if (img === "teo") {
@@ -80,6 +90,7 @@ const resetQuestion = () => {
   $answers.forEach((element) => {
     element.classList.add("answerDetail--see");
   });
+
   seeQuestion(num);
   activeNextAnswer = 0;
 };
@@ -109,32 +120,26 @@ $optionsAnswers.addEventListener("click", (e) => {
       answerIncorrect();
     }
     activeNextAnswer = 1;
+    width = 100;
+    reinciarAuto = 0;
   }
 });
 
 const answerCorrect = () => {
   $answerDetail.classList.add("optionsAnswer__correct");
   $answerDetail.textContent = rightAnswer;
-
   updateAnswerStarts("correct");
-
-  width = 100;
   setTimeout(() => {
     nextQuestion();
     $answerActive.classList.remove("answersCorrect");
-
-    progress();
-  }, 3000);
+  }, 2000);
 };
 
 const answerIncorrect = () => {
-  width = 100;
   updateAnswerStarts("wrong");
-
   setTimeout(() => {
     nextQuestion();
-    $answerActive.classList.remove("answersIncorrect");
 
-    progress();
+    $answerActive.classList.remove("answersIncorrect");
   }, 2000);
 };
